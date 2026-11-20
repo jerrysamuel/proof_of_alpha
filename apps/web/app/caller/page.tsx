@@ -1,0 +1,2 @@
+import { redirect } from 'next/navigation';
+export default async function CallerSearch({searchParams}:{searchParams:Promise<{address?:string}>}){const {address}=await searchParams; if(address&&/^0x[a-fA-F0-9]{40}$/.test(address))redirect(`/caller/${address}`); return <div className="page-shell narrow"><div className="eyebrow">SEARCH</div><h1>Address only.</h1><p className="hero-copy">Enter a valid 0x address to view its public call record. Agent ID names are not searchable.</p></div>}

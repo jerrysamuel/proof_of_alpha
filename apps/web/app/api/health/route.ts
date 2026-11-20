@@ -1,0 +1,1 @@
+export function GET(){return Response.json({mode:process.env.NEXT_PUBLIC_DEMO==='1'?'demo':'live',chainId:Number(process.env.NEXT_PUBLIC_CHAIN_ID??56),lastIndexedBlock:null},{headers:{'Cache-Control':'public, max-age=10'}})}

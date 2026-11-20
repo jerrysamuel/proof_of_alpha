@@ -1,0 +1,1 @@
+export type CallStatus='open'|'resolved'; export type CallRecord={id:string;caller:string;asset:string;isLong:boolean;openedAt:number;expiresAt:number;entryPrice:string;exitPrice?:string;returnBps?:number;status:CallStatus;won?:boolean};

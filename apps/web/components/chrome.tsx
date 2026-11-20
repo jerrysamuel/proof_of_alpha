@@ -1,0 +1,5 @@
+import Link from 'next/link';
+export function DemoBanner(){return process.env.NEXT_PUBLIC_DEMO==='1'?<div className="demo-banner">DEMO DATA · NOT REAL CALLS</div>:null}
+export function Header(){return <header><Link href="/" className="brand"><span className="brand-mark">✦</span> PROOF<span>OF</span>ALPHA</Link><nav><Link href="/leaderboard">Leaderboard</Link><Link href="/post">Quest</Link><Link href="/about">About</Link></nav><form action="/caller"><input name="address" placeholder="Search 0x address" aria-label="Search 0x address"/><button aria-label="Search">⌕</button></form></header>}
+export function BottomNav(){return <div className="bottom-nav"><Link href="/">⌂<span>Arena</span></Link><Link href="/leaderboard">◈<span>Rankings</span></Link><Link href="/post">＋<span>Quest</span></Link><Link href="/about">ⓘ<span>About</span></Link></div>}
+export function DisclaimerFooter(){return <footer>Not financial advice. Past results do not predict future results. Calls are published by users and are not endorsed.</footer>}

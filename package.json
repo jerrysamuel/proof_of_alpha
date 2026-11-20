@@ -1,0 +1,48 @@
+{
+  "name": "proof-of-alpha",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev": "next dev apps/web",
+    "build": "next build apps/web",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "db:generate": "drizzle-kit generate --config db/drizzle.config.ts",
+    "db:migrate": "drizzle-kit migrate --config db/drizzle.config.ts",
+    "worker:indexer": "tsx apps/worker/indexer-runner.ts",
+    "test:e2e": "playwright test",
+    "format": "prettier --check ."
+    ,"copy:check": "node scripts/check-copy.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/node": "22.10.2",
+    "@types/react": "19.0.2",
+    "@types/react-dom": "19.0.2",
+    "drizzle-kit": "^0.31.11",
+    "eslint": "10.15.0",
+    "postcss": "8.5.23",
+    "prettier": "3.4.2",
+    "tsx": "^4.23.15",
+    "typescript": "5.7.2",
+    "vite": "6.4.5",
+    "vitest": "4.1.12"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "4.0.0",
+    "drizzle-orm": "0.45.3",
+    "next": "15.5.29",
+    "postgres": "^4.1.1",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "viem": "^2.58.2",
+    "zod": "4.6.6"
+  },
+  "pnpm": {
+    "overrides": {
+      "postcss": "8.5.23",
+      "esbuild": "0.25.12"
+    }
+  }
+}
